@@ -14,10 +14,13 @@ public class ShoeCloset : MonoBehaviour {
 		drawers.Add (transform.Find ("Drawer2").gameObject.GetComponent<Drawer> ());
 		drawers.Add (transform.Find ("Drawer3").gameObject.GetComponent<Drawer> ());
 	}
-	
-	void Start () {
-//		foreach (var drawer in drawers) {
-//			drawer.open ();
-//		}
+
+	void Update () {
+		if (Input.GetKeyDown ("1"))
+			drawers [0].toggle ();
+		if (Input.GetKeyDown ("2"))
+			drawers [1].toggle ();
+		if (Input.GetKeyDown ("3"))
+			drawers [2].toggle ();
 	}
 }

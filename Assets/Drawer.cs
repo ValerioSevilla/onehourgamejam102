@@ -23,6 +23,10 @@ public class Drawer : MonoBehaviour {
 		anim.SetBool (OPEN_BOOL_HASH, false);
 	}
 
+	public void toggle() {
+		anim.SetBool (OPEN_BOOL_HASH, !anim.GetBool (OPEN_BOOL_HASH));
+	}
+
 	public void randomize() {
 		foreach (var shoe in Shoes) {
 			Destroy (shoe);
