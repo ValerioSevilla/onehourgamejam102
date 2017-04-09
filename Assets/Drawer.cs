@@ -23,8 +23,11 @@ public class Drawer : MonoBehaviour {
 		anim.SetBool (OPEN_BOOL_HASH, false);
 	}
 
-	public void toggle() {
-		anim.SetBool (OPEN_BOOL_HASH, !anim.GetBool (OPEN_BOOL_HASH));
+	public bool toggle() {
+		bool closing = anim.GetBool (OPEN_BOOL_HASH);
+		anim.SetBool (OPEN_BOOL_HASH, !closing);
+
+		return closing;
 	}
 
 	public void randomize() {
